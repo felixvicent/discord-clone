@@ -40,7 +40,7 @@ export function NavigationItem({ id, imageUrl, name }: NavigationItemProps) {
             )
           }
         >
-          <Image src={imageUrl} alt='Channel' fill />
+          <Image src={imageUrl} alt='Channel' fill objectFit="cover" />
         </div>
       </button>
     </ActionTooltip >
