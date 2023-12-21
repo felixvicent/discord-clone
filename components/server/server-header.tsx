@@ -83,13 +83,19 @@ export function ServerHeader({ role, server }: ServerHeaderProps) {
           <DropdownMenuSeparator />
         )}
         {isAdmin && (
-          <DropdownMenuItem className="text-rose-500 px-3 py-2 text-sm cursor-pointer">
+          <DropdownMenuItem
+            className="text-rose-500 px-3 py-2 text-sm cursor-pointer"
+            onClick={() => onOpen("deleteServer", { server })}
+          >
             Apagar servidor
             <Trash className="w-4 h-4 ml-auto" />
           </DropdownMenuItem>
         )}
         {!isAdmin && (
-          <DropdownMenuItem className="text-rose-500 px-3 py-2 text-sm cursor-pointer">
+          <DropdownMenuItem
+            onClick={() => onOpen("leaveServer", { server })}
+            className="text-rose-500 px-3 py-2 text-sm cursor-pointer"
+          >
             Sair do servidor
             <LogOut className="w-4 h-4 ml-auto" />
           </DropdownMenuItem>
