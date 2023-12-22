@@ -12,7 +12,7 @@ export function SocketIndicator() {
         variant="outline"
         className="bg-yellow-600 text-white border-none"
       >
-        Offline
+        Polling
       </Badge>
     )
   }
